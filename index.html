@@ -1,66 +1,205 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Song Yonggyu - 데이터 엔지니어</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 2rem; }
-    header { text-align: center; margin-bottom: 4rem; padding-top: 4rem; border-top: 1px solid #eaeaea; }
-    h1 { font-size: 2.5rem; color: #1a1a1a; margin-bottom: 0.5rem; line-height: 1.2; }
-    .subtitle { color: #666; font-size: 1.1rem; }
-    section { margin: 3rem 0; }
-    h2 { font-size: 1.3rem; color: #1a1a1a; margin-bottom: 1rem; border-left: 3px solid #2563eb; padding-left: 0.5rem; }
-    .section-desc { color: #666; font-size: 0.95rem; line-height: 1.8; }
-    .badge-container { display: flex; flex-wrap: wrap; gap: 0.25rem; margin-top: 0.5rem; }
-    .badge { background: #f0f4ff; color: #3b5bdb; padding: 0.2rem 0.6rem; border-radius: 1rem; font-size: 0.8rem; font-weight: 500; }
-    ul { list-style: none; }
-    li { margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; }
-    li::before { content: "→"; color: #2563eb; position: absolute; left: 0; }
-    a { color: #2563eb; text-decoration: none; transition: color 0.2s; }
-    a:hover { color: #1d4ed8; }
-    footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #eaeaea; text-align: center; color: #666; font-size: 0.9rem; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yonggyu Song - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .about {
+            text-align: center;
+            max-width: 600px;
+        }
+        
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #4a5568;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .skill {
+            background: #e2e8f0;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #2d3748;
+            color: white;
+        }
+        
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .profile {
+                flex-direction: column;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Song Yonggyu</h1>
-    <p class="subtitle">컴퓨터공학과 4 학기 재학중 | 데이터 엔지니어</p>
-    <div class="badge-container">
-      <span class="badge">🎓 졸업예정: 2026.02</span>
-      <span class="badge">💻 정보처리기사 보유</span>
-      <span class="badge">📊 ADSP 자격증 보유</span>
+    <header>
+        <div class="container">
+            <h1>안녕하세요! 저는 송용구입니다.</h1>
+            <p>컴퓨터공학 전공 4년제 학생 (2026년 2월 졸업 예정)</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="profile">
+            <img src="https://placehold.co/150x150?text=Profile" alt="Profile Picture" class="profile-img">
+            <div class="about">
+                <h2>소개</h2>
+                <p>정보처리기사 및 ADSP 자격증 보유, 2026년 10월 포스코 AI BIG DATA 아카데미 수료 예정입니다.</p>
+                <p>주로 컴퓨터공학과 관련된 프로젝트를 수행하고 있으며, 관심 분야는 인공지능 및 데이터 분석입니다.</p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h3>경력</h3>
+            <ul>
+                <li><strong>포스코 AI BIG DATA 아카데미 (2026년 10월 수료 예정)</strong></li>
+                <li><strong>정보처리기사 자격증 (2025년 취득)</strong></li>
+                <li><strong>ADSP 자격증 (2025년 취득)</strong></li>
+                <li><strong>컴퓨터공학과 4년제 학생 (2026년 2월 졸업 예정)</strong></li>
+            </ul>
+        </section>
+        
+        <section class="section">
+            <h3>프로젝트</h3>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h4>푸드득 (Fooddeok) 프로젝트</h4>
+                    <p>실시간 대변 추적 모니터링 시스템으로, 조장의 화장실 상태를 실시간으로 조원들이 확인할 수 있게 해주는 시스템입니다.</p>
+                </div>
+                
+                <div class="project-card">
+                    <h4>Kaggle 챌린지</h4>
+                    <p>AI 분석 및 데이터 처리 관련 다양한 챌린지를 참여한 기록을 보유하고 있습니다.</p>
+                </div>
+                
+                <div class="project-card">
+                    <h4>TradeOS 로드맵</h4>
+                    <p>트레이딩 시스템 개발을 위한 로드맵 자료를 정리해두었습니다.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h3>기술 스택</h3>
+            <div class="skills">
+                <span class="skill">Python</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">React</span>
+                <span class="skill">Node.js</span>
+                <span class="skill">TensorFlow/PyTorch</span>
+                <span class="skill">SQL</span>
+                <span class="skill">Git</span>
+                <span class="skill">AWS</span>
+            </div>
+        </section>
     </div>
-  </header>
-
-  <section id="about">
-    <h2>About</h2>
-    <p class="section-desc">컴퓨터공학과 4 년제 재학 중입니다. 데이터 분석, 머신러닝에 특화된 개발자 역할을 하고 있습니다.<br>정보처리기사와 ADSP 자격증을 취득했으며, 2026 년 10 월 포스코 AI 빅데이터 아카데미 수료 예정입니다.</p>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>프로그래밍:</strong> Python, JavaScript, Java</li>
-      <li><strong>데이터베이스:</strong> MySQL, PostgreSQL, MongoDB</li>
-      <li><strong>데이터 분석:</strong> pandas, NumPy, matplotlib</li>
-      <li><strong>머신러닝:</strong> scikit-learn, TensorFlow, Keras</li>
-      <li><strong>클라우드/AWS:</strong> Lambda, S3, EC2</li>
-    </ul>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>데이터 분석 프로젝트</strong><br>시계열 예측 모델 구축 및 시각화 (Python, pandas)</li>
-      <li><strong>머신러닝 포트폴리오</strong><br>다양한 알고리즘 구현 및 성능 평가 (scikit-learn)</li>
-      <li><strong>웹 scraper 프로젝트</strong><br>크롤링을 통한 데이터 수집 및 분석 파이프라인 구축</li>
-    </ul>
-  </section>
-
-  <footer>
-    <span>Contact: song-yong-gyu@outlook.com | GitHub: @SongYongGyu4006</span>
-  </footer>
+    
+    <footer>
+        <div class="container">
+            <p>© 2026 Yonggyu Song. All rights reserved.</p>
+            <p>Contact: song@example.com</p>
+        </div>
+    </footer>
 </body>
 </html>
